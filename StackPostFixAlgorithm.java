@@ -27,7 +27,8 @@ public class StackPostFixAlgorithm {
 			if (Character.isDigit(currentToken))
 			{
 				//Then push it into the stack
-				argsStack.push(new Integer(currentToken));
+				int x= Integer.parseInt(new Character(currentToken).toString());
+				argsStack.push(x);
 			}
 			if (currentToken == star || currentToken == minus || currentToken == plus || currentToken == mod ||  currentToken == div)
 			{
@@ -67,7 +68,7 @@ public class StackPostFixAlgorithm {
 		int top = 0;
 		public void push(int y)
 		{
-			System.out.println("X = " + y);
+			//System.out.println("X = " + y);
 			if (top > 3) //or we can say 5
 				System.out.println("Stack is full");
 			else{
